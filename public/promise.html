@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+
+
+<body>
+    <button id="getButton">发送get请求</button>
+    <button id="postButton">发送post请求</button>
+
+</body>
+<script>
+    //ToDo: Promise 和 async...await...
+    //ToDo: thennable
+    //刚开始Promise起源于民间 后面被官方吸纳 Promise A+规范
+    //内置的构造函数 针对于不能立刻得到结果（异步操作：setTimeout、请求）
+    // function delay(option) {
+    //     const promise = new Promise(function (resolve, reject) {
+    //         setTimeout(() => {
+    //             const randomNumber = Math.random();
+    //             if (randomNumber >= 0.5) {
+
+    //                 option.success()
+    //                 delay()
+    //             } else {
+
+    //                 option.fail()
+    //             }
+    //         })
+    //         return promise;
+    //     })
+    // }
+    //Promise把异步回调方案转化为链式调用的方案
+    //只有Promise对象才可以跟then、catch方法
+    //通过then来注册成功的回调函数
+    // delay({ duration: 2000 })
+    //     .then(function () {
+    //         console.log("成功了");
+    //         return delay({ duration: 3000 })
+    //     })
+    //     .then(function () {
+    //         console.log("第二次成功了");
+    //         return delay({ duration: 1000 })
+    //     })
+    //     .then(function () {
+    //         console.log("第三次成功了");
+    //         return delay({ duration: 1000 })
+    //     })
+    //     .catch(function () {
+    //         console.log("失败了");
+
+    //     })
+    //     setTimeout(() => {
+    //         const randomNumber = Math.random();
+    //         if (randomNumber >= 0.5) {
+    //             //成功
+    //             //successHandler()
+    //             option.success()
+    //             delay()
+    //         } else {
+    //             //失败
+    //             // failHandler()
+    //             option.fail()
+    //         }
+    //     }, option.duration);
+    // }
+    // function successHandler() {
+    //     console.log("成功了");
+    //     delay({
+    //         duration: 3000,
+    //         success() {
+    //             console.log("第二次成功")
+    //         },
+    //         fail() {
+    //             console.log("第二次失败");
+    //         }
+    //     })
+    // }
+    // function failHandler() {
+    //     console.log("失败了");
+
+    // }
+    // delay({
+    //     duration: 5000,
+    //     success: successHandler,
+    //     fail: failHandler,
+    // });
+    const getButton = document.getElementById("getButton")
+    const postButton = document.getElementById("postButton")
+    const searchSongs = (params) => {
+        return axios.get("http://192.168.68.178:3000/search", { params })
+    }
+    getButton.addEventListener("click", function () {
+        // axios.get("http://192.168.68.178:3000/search", {
+        //     params: {
+        searchSongs({
+            type: 1,
+            limit: 10,
+            keywords: 'rap'
+        }).then(function (res) {
+            console.log(res.data.result.songs);
+        }).catch(function (err) {
+            console.log(err);
+        })
+    })
+    postButton.addEventListener("click", function () {
+        axios.post("http://192.168.68.178:3000/search", {
+            params: {
+
+                type: 1,
+                limit: 10,
+                keywords: 'rap'
+            }
+        }).then(function (res) {
+            console.log(res);
+        }).catch(function (err) {
+            console.log(err);
+        })
+    })
+</script>
+
+</html>
