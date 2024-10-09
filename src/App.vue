@@ -1,7 +1,16 @@
 <template>
-  <div>
-    <RouterView></RouterView>
-  </div>
+  <App>
+    <ConfigProvider
+    :theme="{
+      token: {
+        colorPrimary: '#032bec',
+      },
+    }"
+  >
+  <RouterView></RouterView>
+  </ConfigProvider>
+  </App>
 </template>
 <script setup>
+import { App, ConfigProvider } from "ant-design-vue";
 </script>
