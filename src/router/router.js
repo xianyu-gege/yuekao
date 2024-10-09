@@ -5,10 +5,14 @@ import LayoutViews from "@/layout/Index.vue";
 const routes = [
   {
     path: "/",
+    redirect: "/login",
+  },
+  {
+    path: "/home",
     component: LayoutViews,
     children: [
       {
-        path: "home",
+        path: "/home",
         component: HomeViews,
       },
     ],
