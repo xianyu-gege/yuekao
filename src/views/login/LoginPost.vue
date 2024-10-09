@@ -1,6 +1,6 @@
 <template>
   <div class=" flex items-center">
-    <div class=" w-[200px] h-[100vh]">
+    <div class=" w-[578px] h-[100vh]">
       <Carousel autoplay>
         <img src="../../images/app9KTBmXHMK2mtI9RHyzPDs-h0NXne1.png" alt="">
         <img src="../../images/appm3V1L6Y3C3podIGShCo686dXRRY4i.png" alt="">
@@ -8,8 +8,8 @@
       </Carousel>
     </div>
     <div class=" flex-1 h-[100vh] flex justify-center items-center">
-      <div class="w-[300px] flex flex-col justify-center items-center">
-        <h1 class=" text-[15px] mb-[30px]">登录，即刻创造您的应用</h1>
+      <div class="w-[500px] flex flex-col justify-center items-center">
+        <h1 class=" text-[35px] mb-[60px]">登录，即刻创造您的应用</h1>
         <Space direction="vertical" class="w-full" size="large">
           <Input v-model:value="userLoginInfo.username" placeholder="请输入邮箱" class="w-full" />
           <Input.Password
