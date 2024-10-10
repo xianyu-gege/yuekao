@@ -5,42 +5,42 @@
           <Icon
             icon="icon-park-outline:workbench"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[2vw]"
           />工作台
         </div>
         <div class="text-center">
           <Icon
             icon="tdesign:folder-1"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />项目
         </div>
         <div class="text-center">
           <Icon
             icon="ph:open-ai-logo-fill"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />AI
         </div>
         <div class="text-center">
           <Icon
             icon="ph:file-text-duotone"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />事项
         </div>
         <div class="text-center">
           <Icon
             icon="ph:code-fill"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />代码
         </div>
         <div class="text-center">
           <Icon
             icon="gravity-ui:cube"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />
           制品
         </div>
@@ -48,7 +48,7 @@
           <Icon
             icon="ic:baseline-insights"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />
           洞察
         </div>
@@ -56,7 +56,7 @@
           <Icon
             icon="akar-icons:book"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />
           知识
         </div>
@@ -64,7 +64,7 @@
           <Icon
             icon="mdi:automatic"
             style="color: black"
-            class="text-[2vw] ml-[1.5vw] mt-[1vw]"
+            class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />
           自动化
         </div>
@@ -80,21 +80,22 @@
           <div>
             <router-link
               to="/basea"
-              class="w-[6vw]
+              class="w-[13vw]
               h-[3vw] inline-block text-[1.3vw] focus:border-b-2 border-[#306fde] text-center"
               >最近访问</router-link
             ><router-link
               to="/baseb"
-              class="w-[6vw] h-[3vw]
+              class="w-[13vw] h-[3vw]
               inline-block text-[1.3vw] focus:border-b-2 border-[#306fde] text-center"
               >全部仓库</router-link
             ><router-link
               to="/basec"
-              class="w-[6vw] h-[3vw]
+              class="w-[13vw] h-[3vw]
               inline-block text-[1.3vw] focus:border-b-2 border-[#306fde] text-center"
               >开源仓库</router-link
             >
           </div>
+          <div> <RouterView></RouterView></div>
         </LayoutContent>
       </Layout>
     </Layout>

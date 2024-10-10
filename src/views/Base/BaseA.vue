@@ -1,3 +1,3 @@
 <template>
-    <div><img src="../../images/1.svg" alt=""></div>
+    <div class=" flex justify-center "><img src="../../images/4.png" alt=""></div>
 </template>
