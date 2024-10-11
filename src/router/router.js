@@ -4,6 +4,7 @@ import LayoutViews from "@/layout/Index.vue";
 import BaseA from "@/views/Base/BaseA.vue";
 import BaseB from "@/views/Base/BaseB.vue";
 import BaseC from "@/views/Base/BaseC.vue";
+import BaseD from "@/views/Base/BaseD.vue";
 
 const routes = [
   {
@@ -13,26 +14,27 @@ const routes = [
   {
     path: "/home",
     component: LayoutViews,
-    // children: [
-    //   {
-    //     path: "/home",
-    //     component: HomeViews,
-    //   },
-    // ],
     children: [
       {
-        path: "/basea",
-        component: BaseA,
-      },
-      {
-        path: "/baseb",
-        component: BaseB,
-      },
-      {
-        path: "/basec",
-        component: BaseC,
+        path: "/based",
+        component: BaseD,
+        children: [
+          {
+            path: "/basea",
+            component: BaseA,
+          },
+          {
+            path: "/baseb",
+            component: BaseB,
+          },
+          {
+            path: "/basec",
+            component: BaseC,
+          },
+        ],
       },
     ],
+
   },
   {
     path: "/login",

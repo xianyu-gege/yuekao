@@ -29,13 +29,16 @@
             class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />事项
         </div>
-        <div class="text-center">
+        <RouterLink to="/based">
+          <div class="text-center">
           <Icon
             icon="ph:code-fill"
             style="color: black"
             class="text-[2vw] ml-[0.5vw] mt-[1vw]"
           />代码
         </div>
+        </RouterLink>
+
         <div class="text-center">
           <Icon
             icon="gravity-ui:cube"

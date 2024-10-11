@@ -17,7 +17,7 @@
            autofocus placeholder="请输入密码" class="w-full" />
         </Space>
         <div class="w-full">
-          <Radio v-model:checked="checked" class="font">我已阅读并同意
+          <Radio v-model:checked="checked" class="font" v-model:value="checkout">我已阅读并同意
             <Button type="link" class="buton">《服务协议</Button>
             和<Button type="link" class="buton">《隐私政策》</Button>
           </Radio>
@@ -42,6 +42,7 @@ const userLoginInfo = ref({
   username: "3113415005@qq.com",
   password: "wx09270013",
 });
+const checkout = ref(false);
 const loginHandle = async () => {
   const loginData = {
     grant_type: "password",
@@ -53,9 +54,11 @@ const loginHandle = async () => {
   };
   // eslint-disable-next-line no-unused-vars
   const [err, res] = await to(getAccessToken(loginData));
-  if (!err) {
+  if (checkout.value === true) {
     notification.success({ message: "登录成功！" });
     router.replace("/home");
+  } else {
+    notification.info({ message: "请勾选协议才能登录" });
   }
 };
 </script>
