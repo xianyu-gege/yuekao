@@ -342,7 +342,12 @@
             </div>
         </div>
         <div>
-            <button  class="w-[8vw] h-[2vw] bg-slate-800 text-white rounded-md absolute bottom-[10vw] left-[46vw]">创建代码仓库</button>
+            <RouterLink to="/warehouse">
+                <button
+                class="w-[8vw] h-[2vw] bg-slate-800
+                text-white rounded-md absolute bottom-[10vw] left-[46vw]">创建代码仓库
+            </button>
+            </RouterLink>
         </div>
     </div>
 </template>

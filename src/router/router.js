@@ -5,6 +5,7 @@ import BaseA from "@/views/Base/BaseA.vue";
 import BaseB from "@/views/Base/BaseB.vue";
 import BaseC from "@/views/Base/BaseC.vue";
 import BaseD from "@/views/Base/BaseD.vue";
+import WareHouse from "@/warehouse/WareHouse.vue";
 
 const routes = [
   {
@@ -34,7 +35,10 @@ const routes = [
         ],
       },
     ],
-
+  },
+  {
+    path: "/warehouse",
+    component: WareHouse,
   },
   {
     path: "/login",
